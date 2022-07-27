@@ -8,6 +8,29 @@ from . import TikTokContentModel
 from .base import BaseModelORM
 
 
+class TikTokVideoVideoModel(BaseModelORM):
+    cover: TikTokContentModel
+    download_addr: TikTokContentModel
+    origin_cover: TikTokContentModel
+    animated_cover: TikTokContentModel
+    dynamic_cover: TikTokContentModel
+    play_addr: TikTokContentModel
+    ai_dynamic_cover_bak: TikTokContentModel
+    ai_dynamic_cover: TikTokContentModel
+    play_addr_h264: TikTokContentModel
+    play_addr_bytevc1: TikTokContentModel
+
+    is_callback: bool
+    ratio: str
+    width: int
+    height: int
+    has_watermark: bool
+    duration: int
+    cdn_url_expired: int
+    misc_download_addrs: str
+    meta: str
+
+
 class TikTokVideoModel(BaseModelORM):
     id: str = Field(..., alias="aweme_id")
     created_time: datetime = Field(..., alias="create_time")  # -Дата и время поста
