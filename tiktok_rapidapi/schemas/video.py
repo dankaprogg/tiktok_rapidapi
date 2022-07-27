@@ -46,6 +46,6 @@ class TikTokVideoModel(BaseModelORM):
 
     @root_validator(pre=True)
     def convert_data(cls, values):
-        values.update(values.get("statistics", {}))
+        values.update(values.get("statistics", {})) # TODO: добавить отдельную модель для statistics
 
         return values
