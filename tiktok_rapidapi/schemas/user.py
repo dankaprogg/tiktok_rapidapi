@@ -3,6 +3,7 @@ from typing import Optional
 from pydantic.class_validators import root_validator
 from pydantic.fields import Field
 
+from . import TikTokContentModel
 from .base import BaseModelORM
 
 
@@ -18,4 +19,10 @@ class TikTokUserModel(BaseModelORM):
     likes_count: Optional[int] = Field(None, alias="total_favorited")
     verified: Optional[int] = Field(0, alias="verification_type")
 
-
+    avatar_168x168: TikTokContentModel
+    avatar_300x300: TikTokContentModel
+    avatar_larger: TikTokContentModel
+    avatar_medium: TikTokContentModel
+    avatar_thumb: TikTokContentModel
+    cover_url: Optional[TikTokContentModel]
+    avatar_medium: TikTokContentModel
