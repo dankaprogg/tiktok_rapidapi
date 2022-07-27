@@ -22,9 +22,9 @@ def ttapi():
 
 @pytest.mark.asyncio
 async def test_get_user_data_by_username(ttapi):
-    res = await ttapi.get_user_data_by_username(username="nike")
+    await ttapi.get_user_data_by_username(username="nike")
 
 
 @pytest.mark.asyncio
 async def test_get_user_data_by_id(ttapi):
-    res = await ttapi.get_user_data_by_id(user_id='208464585232822272')
+    await ttapi.get_user_data_by_id(user_id='208464585232822272')
