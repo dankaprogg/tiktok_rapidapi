@@ -19,4 +19,3 @@ class TikTokUserModel(BaseModelORM):
     verified: Optional[int] = Field(0, alias="verification_type")
 
 
-        return values
