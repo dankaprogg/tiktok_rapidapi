@@ -1,4 +1,6 @@
 import os
+import time
+
 import pytest
 from dotenv import load_dotenv
 from tiktok_rapidapi import TikTokRapidAPI
@@ -27,3 +29,13 @@ async def test_get_user_data_by_username(ttapi):
 @pytest.mark.asyncio
 async def test_get_user_data_by_id(ttapi):
     await ttapi.get_user_data_by_id(user_id='208464585232822272')
+
+
+@pytest.mark.asyncio
+async def test_get_user_feed_by_username(ttapi):
+    await ttapi.get_user_feed_by_username(username="nike", max_cursor=int(time.time() * 1000))
+
+
+@pytest.mark.asyncio
+async def test_get_user_feed_by_id(ttapi):
+    await ttapi.get_user_feed_by_id(user_id='208464585232822272', max_cursor=int(time.time() * 1000))
