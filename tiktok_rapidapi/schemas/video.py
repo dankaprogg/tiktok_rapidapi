@@ -6,6 +6,7 @@ from pydantic.fields import Field
 
 from . import TikTokContentModel
 from .base import BaseModelORM
+from . import TikTokUserModel
 
 
 class TikTokVideoVideoModel(BaseModelORM):
@@ -40,6 +41,8 @@ class TikTokVideoModel(BaseModelORM):
     likes_count: int = Field(..., alias="digg_count")  # -Количество лайков поста
     comment_count: Optional[int] = Field(None, alias="comment_count")  # -Количество комментариев поста
     share_url: Optional[str] = Field(None, alias="share_url")
+    author: TikTokUserModel
+    video: TikTokVideoVideoModel
 
     @root_validator(pre=True)
     def convert_data(cls, values):
