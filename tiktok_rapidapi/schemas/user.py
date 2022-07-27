@@ -9,7 +9,6 @@ from .base import BaseModelORM
 
 class TikTokUserModel(BaseModelORM):
     id: str = Field(..., alias="uid")
-    avatar_link: str = Field(..., alias="avatar_larger")
     name: str = Field(..., alias="nickname")
     username: str = Field(..., alias="unique_id")
     description: Optional[str] = Field(None, alias="signature")
