@@ -1,3 +1,4 @@
+from typing import List
 from typing import Optional
 
 from pydantic.class_validators import root_validator
@@ -23,5 +24,5 @@ class TikTokUserModel(BaseModelORM):
     avatar_larger: TikTokContentModel
     avatar_medium: TikTokContentModel
     avatar_thumb: TikTokContentModel
-    cover_url: Optional[TikTokContentModel]
+    cover_url: Optional[List[TikTokContentModel]]
     avatar_medium: TikTokContentModel
