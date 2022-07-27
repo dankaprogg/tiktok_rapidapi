@@ -2,14 +2,13 @@ import os
 import pytest
 from dotenv import load_dotenv
 from tiktok_rapidapi import TikTokRapidAPI
-from tiktok_rapidapi.schemas import TikTokUserModel
 
 load_dotenv()
 rapidapi_host = os.environ.get("rapidapi_host")
 rapidapi_key = os.environ.get("rapidapi_key")
 
 if not rapidapi_key or not rapidapi_host:
-    raise Exception("Enter credentials in env")
+    raise Exception("Enter credentials in .env")
 
 
 @pytest.fixture
