@@ -4,6 +4,7 @@ from typing import Optional
 from pydantic.class_validators import root_validator
 from pydantic.fields import Field
 
+from . import TikTokContentModel
 from .base import BaseModelORM
 
 
