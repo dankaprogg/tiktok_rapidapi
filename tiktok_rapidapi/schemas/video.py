@@ -28,7 +28,7 @@ class TikTokVideoVideoModel(BaseModelORM):
     has_watermark: bool
     duration: int
     cdn_url_expired: int
-    misc_download_addrs: str
+    misc_download_addrs: Optional[str]
     meta: str
 
 

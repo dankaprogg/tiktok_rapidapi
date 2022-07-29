@@ -107,7 +107,6 @@ class TikTokRapidAPI(object):
 
             max_cursor = response_data.get("max_cursor")
 
-
     async def get_user_data_by_username(self, username: AnyStr) -> TikTokUserModel:
         """
         You can GET a user's Data by their Username.
