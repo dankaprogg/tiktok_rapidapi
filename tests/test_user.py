@@ -22,20 +22,20 @@ def ttapi():
 
 
 @pytest.mark.asyncio
-async def test_get_user_data_by_username(ttapi):
+async def test_get_user_data_by_username(ttapi: TikTokRapidAPI):
     await ttapi.get_user_data_by_username(username="nike")
 
 
 @pytest.mark.asyncio
-async def test_get_user_data_by_id(ttapi):
+async def test_get_user_data_by_id(ttapi: TikTokRapidAPI):
     await ttapi.get_user_data_by_id(user_id='208464585232822272')
 
 
 @pytest.mark.asyncio
-async def test_get_user_feed_by_username(ttapi):
+async def test_get_user_feed_by_username(ttapi: TikTokRapidAPI):
     await ttapi.get_user_feed_by_username(username="nike", max_cursor=int(time.time() * 1000))
 
 
 @pytest.mark.asyncio
-async def test_get_user_feed_by_id(ttapi):
+async def test_get_user_feed_by_id(ttapi: TikTokRapidAPI):
     await ttapi.get_user_feed_by_id(user_id='208464585232822272', max_cursor=int(time.time() * 1000))
