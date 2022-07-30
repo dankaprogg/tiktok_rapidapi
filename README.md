@@ -33,3 +33,15 @@ source venv/bin/activate
 pip install -r requirements.txt
 python3 setup.py sdist bdist_wheel install
 ```
+
+## Tests
+We are using pytest framework with pytest-asyncio
+
+```shell
+pip install pytest
+pip install pytest-asyncio
+```
+
+```shell
+pytest -v tests
+```

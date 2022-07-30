@@ -64,7 +64,7 @@ class TikTokRapidAPI(object):
         response_data = json_response.get("data") or {}
         return response_data
 
-    async def get_user_feed_by_username(self, username: AnyStr, max_cursor: Union[int, float]) -> List[
+    async def get_user_feed_by_username(self, username: AnyStr, max_cursor: int) -> List[
         TikTokVideoModel]:
         """
         You can GET a user's Feed by their Username.
@@ -106,7 +106,6 @@ class TikTokRapidAPI(object):
                 break
 
             max_cursor = response_data.get("max_cursor")
-
 
     async def get_user_data_by_username(self, username: AnyStr) -> TikTokUserModel:
         """
