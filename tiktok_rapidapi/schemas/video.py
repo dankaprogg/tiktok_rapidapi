@@ -18,8 +18,8 @@ class TikTokVideoVideoModel(BaseModelORM):
     play_addr: TikTokContentModel
     ai_dynamic_cover_bak: TikTokContentModel
     ai_dynamic_cover: TikTokContentModel
-    play_addr_h264: TikTokContentModel
-    play_addr_bytevc1: TikTokContentModel
+    play_addr_h264: Optional[TikTokContentModel]
+    play_addr_bytevc1: Optional[TikTokContentModel]
 
     is_callback: bool
     ratio: str
