@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='tiktok_rapidapi',
-    version='0.2.1',
+    version='0.2.2',
     description='TikTok API on RapidAPI',
     packages=['tiktok_rapidapi', 'tiktok_rapidapi.schemas'],
     author_email='dshvedov@kotspin.ru',
