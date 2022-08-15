@@ -13,7 +13,7 @@ class TikTokVideoVideoModel(BaseModelORM):
     cover: TikTokContentModel
     download_addr: TikTokContentModel
     origin_cover: TikTokContentModel
-    animated_cover: TikTokContentModel
+    animated_cover: Optional[TikTokContentModel]
     dynamic_cover: TikTokContentModel
     play_addr: TikTokContentModel
     ai_dynamic_cover_bak: TikTokContentModel
